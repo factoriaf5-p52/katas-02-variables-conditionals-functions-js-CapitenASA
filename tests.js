@@ -5,7 +5,11 @@ describe("Variables en JS", () => {
     it("Completa todas las constantes que faltan", () => {
 
         const a = 10;
-
+        const b = 1.34;
+        const c = true;
+        const d = "Buenos días";
+        const e = "Pepe";
+        const f = "Buenos días, pepe";
         expect(a).to.equal(10);
         expect(b).to.equal(1.34);
         expect(c).to.equal(true);
@@ -17,6 +21,10 @@ describe("Variables en JS", () => {
     it("Completa todas las variables que faltan para que las operaciones resulten correctamente", () => {
 
         let a = 11;
+        let b = .34;
+        let c = 10;
+        let d = 770;
+        let e = 
 
         expect(a + b).to.equal(11.34);
         expect(a * c).to.equal(110);
