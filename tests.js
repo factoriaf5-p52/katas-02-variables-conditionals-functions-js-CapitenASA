@@ -43,14 +43,14 @@ describe("Variables en JS", () => {
 
         let a = 10;
         let b = 100;
-        //let c = "all" == 'all';
+        let c = undefined;
         let d = null !== 'Hello';
-        let n = 'Hello';
+        let n = 'B';
 
         expect(a > 9).to.be.true;
         expect(a < 11).to.be.true;
         expect(b === 100).to.be.true;
-        //expect(c === undefined).to.be.true;
+        expect(c === undefined).to.be.true;                                 ///For That i was search solution but still i don't understand well let check in class this
         expect(d !== "Hello").to.be.true;
         expect(n.startsWith('A')).to.be.false;
     })
@@ -60,16 +60,15 @@ describe("condicionales en javascript", () => {
     it("completa el valor del resultado esperado (expected)", () => {
 
         let name = "Pepe";
-
         let result = "KO";
 
         // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/length
         if (name.length === 6) {
-            result = "OK"
-        }
+            result = "OK";
+                }
 
-        // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        // substituye ??? por el valor que tiene la variable "result"
+        expect(result === "KO").to.be.true;
     })
 
     it("comparando cadenas (strings)", () => {
@@ -85,7 +84,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "pikachu").to.be.true;
     })
 
     it("Interpolación de cadenas (strings) (1)", () => {
@@ -102,7 +101,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "Pizza con Pepperoni").to.be.true;
     })
 
     it("Interpolación de cadenas (strings) (2)", () => {
@@ -119,7 +118,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "Pizza con Piña").to.be.true;
     })
 })
 
@@ -134,7 +133,6 @@ describe("Funciones en JS", () => {
     }
 
     function h(name) {
-        
         // https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/length
         if (name.length <= 4) {
             return "too short";
@@ -152,27 +150,21 @@ describe("Funciones en JS", () => {
         let result = f(10, 30, 2);
 
 
-        // substituye "???" por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        // substituye "???" por el valor que tiene la variable "result"
+        expect(result === 28).to.be.true;
     })
 
-    it("Cuál es el resultado de invocar la función? (2)", () => {
-
+ it("Cuál es el resultado de invocar la función? (2)", () => {
         let result = g("Cerebro", "Pinky");
-
-
-        // substituye "???" por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        // substituye "???" por el valor que tiene la variable "resut
+        expect(result === "Son Pinky y Cerebro").to.be.true;
     })
-
     it("Cuál es el resultado de invocar la función? (3)", () => {
-
         // substituye "???" por el resultado en cada caso
-        expect(h("khaleesi mother of dragons breaker of chains") === "???").to.be.true;
-        expect(h("sarah") === "???").to.be.true;
-        expect(h("bob") === "???").to.be.true;
-        expect(h("robertson") === "???").to.be.true;
+        expect(h("khaleesi mother of dragons breaker of chains") === "very long").to.be.true;
+        expect(h("sarah") === "adecquate").to.be.true;
+        expect(h("bob") === "too short").to.be.true;
+        expect(h("robertson") === "long").to.be.true;
     })
-
 })
 
